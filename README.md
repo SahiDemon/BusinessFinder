@@ -1,6 +1,6 @@
-# Sri Lanka Engineering & Construction Directory
+# Sri Lanka Business Finder Directory
 
-Small full-stack Node web app for searching Sri Lankan engineering, construction, and concrete companies by area and category, with Excel-friendly CSV export and live provider refresh hooks.
+Small full-stack Node web app for searching Sri Lankan companies by area and category, with Excel-friendly CSV export and live provider refresh hooks.
 
 ## Features
 
