@@ -1,0 +1,17 @@
+{
+  "name": "sl-engineering-directory",
+  "version": "1.0.0",
+  "description": "Sri Lanka engineering and construction directory web app",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "postgres": "^3.4.8"
+  }
+}

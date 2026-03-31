@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sri Lanka Engineering Directory</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero__text">
+          <p class="hero__credit">
+            webapp by
+            <a href="https://sahiya.me" target="_blank" rel="noreferrer">Sahiya</a>
+          </p>
+          <p class="eyebrow">Sri Lanka company search</p>
+          <h1>Find builders fast.</h1>
+          <p class="hero__summary">
+            Search by city, filter quickly, and export for Excel.
+          </p>
+        </div>
+        <div class="hero__panel">
+          <form id="searchForm" class="search-form">
+            <label>
+              Search
+              <input
+                id="q"
+                name="q"
+                type="text"
+                placeholder="engineering and construction companies"
+              />
+            </label>
+            <label>
+              City / Area
+              <input id="city" name="city" type="text" placeholder="Colombo or Horana" />
+            </label>
+            <label>
+              Category
+              <input id="category" name="category" type="text" placeholder="concrete" />
+            </label>
+            <div class="search-actions">
+              <button type="submit" class="button button--primary">Search Saved Data</button>
+              <button type="button" id="refreshButton" class="button button--ghost">
+                Fetch New Live Data
+              </button>
+            </div>
+          </form>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="filters">
+          <div class="section-head">
+            <h2>Filters</h2>
+            <button type="button" id="resetFilters" class="link-button">Reset</button>
+          </div>
+
+          <label>
+            Province
+            <select id="province" name="province">
+              <option value="">All provinces</option>
+            </select>
+          </label>
+
+          <label>
+            District
+            <select id="district" name="district">
+              <option value="">All districts</option>
+            </select>
+          </label>
+
+          <label>
+            Category quick filter
+            <select id="categoryQuick">
+              <option value="">All categories</option>
+            </select>
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox" id="hasPhone" />
+            <span>Has phone</span>
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox" id="hasWebsite" />
+            <span>Has website</span>
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox" id="ratingAvailable" />
+            <span>Rating available</span>
+          </label>
+
+          <button type="button" id="exportButton" class="button button--dark">
+            Export visible results
+          </button>
+        </aside>
+
+        <section class="results">
+          <div class="results__toolbar">
+            <div>
+              <h2>Company results</h2>
+              <p id="resultSummary">Loading companies...</p>
+            </div>
+            <div class="pager">
+              <button type="button" id="prevPage" class="button button--ghost">Previous</button>
+              <span id="pageIndicator">Page 1</span>
+              <button type="button" id="nextPage" class="button button--ghost">Next</button>
+            </div>
+          </div>
+
+          <div id="message" class="message" hidden></div>
+          <div id="resultsGrid" class="results-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="companyCardTemplate">
+      <article class="company-card">
+        <div class="company-card__top">
+          <div>
+            <p class="company-card__source"></p>
+            <h3 class="company-card__title"></h3>
+          </div>
+          <div class="company-card__rating"></div>
+        </div>
+        <p class="company-card__categories"></p>
+        <p class="company-card__address"></p>
+        <div class="company-card__meta"></div>
+        <div class="company-card__actions"></div>
+        <p class="company-card__updated"></p>
+      </article>
+    </template>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

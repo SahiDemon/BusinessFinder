@@ -1,0 +1,17 @@
+{
+  "cleanUrls": true,
+  "functions": {
+    "api/search.js": {
+      "regions": ["sin1"]
+    },
+    "api/meta.js": {
+      "regions": ["sin1"]
+    },
+    "api/export.js": {
+      "regions": ["sin1"]
+    },
+    "api/ingest/search.js": {
+      "regions": ["sin1"]
+    }
+  }
+}
